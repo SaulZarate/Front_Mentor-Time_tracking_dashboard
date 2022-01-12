@@ -1,14 +1,119 @@
 let data = []
 
-/* // Para pruebas en local
-fetch('../data.json') */
-/* Deployment in Github */
-fetch('https://github.com/SaulZarate/Front_Mentor-Time_tracking_dashboard/blob/main/data.json')
+// Para pruebas en local
+data = [
+    {
+        "title": "Work",
+        "timeframes": {
+            "daily": {
+                "current": 5,
+                "previous": 7
+            },
+            "weekly": {
+                "current": 32,
+                "previous": 36
+            },
+            "monthly": {
+                "current": 103,
+                "previous": 128
+            }
+        }
+    },
+    {
+        "title": "Play",
+        "timeframes": {
+            "daily": {
+                "current": 1,
+                "previous": 2
+            },
+            "weekly": {
+                "current": 10,
+                "previous": 8
+            },
+            "monthly": {
+                "current": 23,
+                "previous": 29
+            }
+        }
+    },
+    {
+        "title": "Study",
+        "timeframes": {
+            "daily": {
+                "current": 0,
+                "previous": 1
+            },
+            "weekly": {
+                "current": 4,
+                "previous": 7
+            },
+            "monthly": {
+                "current": 13,
+                "previous": 19
+            }
+        }
+    },
+    {
+        "title": "Exercise",
+        "timeframes": {
+            "daily": {
+                "current": 1,
+                "previous": 1
+            },
+            "weekly": {
+                "current": 4,
+                "previous": 5
+            },
+            "monthly": {
+                "current": 11,
+                "previous": 18
+            }
+        }
+    },
+    {
+        "title": "Social",
+        "timeframes": {
+            "daily": {
+                "current": 1,
+                "previous": 3
+            },
+            "weekly": {
+                "current": 5,
+                "previous": 10
+            },
+            "monthly": {
+                "current": 21,
+                "previous": 23
+            }
+        }
+    },
+    {
+        "title": "Self Care",
+        "timeframes": {
+            "daily": {
+                "current": 0,
+                "previous": 1
+            },
+            "weekly": {
+                "current": 2,
+                "previous": 2
+            },
+            "monthly": {
+                "current": 7,
+                "previous": 11
+            }
+        }
+    }
+]
+
+/* Usando Fetch */
+// No funciona usando el recurso con github por politicas seguridad
+/* fetch('../data.json')
     .then(res => res.json())
     .then(info => {
         data = info
     })
-    .catch(err => console.log("No se encontraron los datos", err))
+    .catch(err => console.log("No se encontraron los datos", err)) */
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -23,7 +128,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const hora_anterior = document.getElementsByClassName('hora-anterior')
 
 
-    function handleNavbar(e){
+    function handleNavbar(e) {
         switch (e.target.textContent) {
             case "Daily":
                 filterData("Daily")
@@ -43,7 +148,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function filterData(dateType){
+    function filterData(dateType) {
         const info_date = data.reduce((a, b) => ([
             ...a, {
                 title: b.title,
