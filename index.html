@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Fuente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="assets/styles.css">
+
+</head>
+
+<body>
+
+  <main class="main">
+
+    <!-- Card Principal -->
+    <div class="card card-principal">
+
+      <div class="content_profile">
+        <div class="content-image">
+          <img src="images/image-jeremy.png" alt="avatar">
+        </div>
+        <div class="content-text">
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
+        </div>
+      </div>
+
+      <div class="content_nav">
+        <ul>
+          <li id="nav_item_Daily">Daily</li>
+          <li id="nav_item_Weekly">Weekly</li>
+          <li id="nav_item_Monthly">Monthly</li>
+        </ul>
+      </div>
+    </div><!-- End Card Principal -->
+
+    <!-- Content Cards -->
+    <div class="content-cards">
+
+      <!-- WORK -->
+      <div class="card card-work">
+        <div class="content_image">
+          <img src="images/icon-work.svg" alt="icon work">
+        </div>
+
+        <div class="content_text">
+          <div class="content_text__jobs-title">
+            <h2 class="jobs_title">Work</h2>
+            <img src="images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+          <div class="content_text__job-time">
+            <h3 class="hora-actual">32hrs</h3>
+            <p class="hora-anterior">Last Week - 36hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PLAY -->
+      <div class="card card-play">
+        <div class="content_image">
+          <img src="images/icon-play.svg" alt="icon play">
+        </div>
+        <div class="content_text">
+          <div class="content_text__jobs-title">
+            <h2 class="jobs_title">Play</h2>
+            <img src="images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+          <div class="content_text__job-time">
+            <h3 class="hora-actual">10hrs</h3>
+            <p class="hora-anterior">Last Week - 8hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- STUDY -->
+      <div class="card card-study">
+        <div class="content_image">
+          <img src="images/icon-study.svg" alt="icon study">
+        </div>
+        <div class="content_text">
+          <div class="content_text__jobs-title">
+            <h2 class="jobs_title">Study</h2>
+            <img src="images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+          <div class="content_text__job-time">
+            <h3 class="hora-actual">4hrs</h3>
+            <p class="hora-anterior">Last Week - 7hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXERCISE -->
+      <div class="card card-exercise">
+        <div class="content_image">
+          <img src="images/icon-exercise.svg" alt="icon exercise">
+        </div>
+        <div class="content_text">
+          <div class="content_text__jobs-title">
+            <h2 class="jobs_title">Exercise</h2>
+            <img src="images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+          <div class="content_text__job-time">
+            <h3 class="hora-actual">4hrs</h3>
+            <p class="hora-anterior">Last Week - 5hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="card card-social">
+        <div class="content_image">
+          <img src="images/icon-social.svg" alt="icon social">
+        </div>
+        <div class="content_text">
+          <div class="content_text__jobs-title">
+            <h2 class="jobs_title">Social</h2>
+            <img src="images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+          <div class="content_text__job-time">
+            <h3 class="hora-actual">5hrs</h3>
+            <p class="hora-anterior">Last Week - 10hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SELF CARE -->
+      <div class="card card-self_care">
+        <div class="content_image">
+          <img src="images/icon-self-care.svg" alt="icon care">
+        </div>
+        <div class="content_text">
+          <div class="content_text__jobs-title">
+            <h2 class="jobs_title">Self Care</h2>
+            <img src="images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+          <div class="content_text__job-time">
+            <h3 class="hora-actual">2hrs</h3>
+            <p class="hora-anterior">Last Week - 7hrs</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Content Cards -->
+
+  </main>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Saúl Zarate</a>.
+  </div>
+
+  <!-- My JavaScript -->
+  <script src="assets/index.js"></script>
+</body>
+
+</html>

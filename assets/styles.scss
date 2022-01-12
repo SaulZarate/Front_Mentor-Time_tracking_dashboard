@@ -1,0 +1,335 @@
+/* Border cards */
+$border-radius-card: 10px; 
+
+/* Colors Primary */
+$blue: hsl(246, 80%, 60%); /* Perfil */
+$light_red: hsl(15, 100%, 70%); /* Work */
+$soft_blue: hsl(195, 74%, 62%); /* Play */
+$light_red_2: hsl(348, 100%, 68%); /* Study */
+$lime_green: hsl(145, 58%, 55%); /* Exercise */
+$violet: hsl(264, 64%, 52%); /* Socila */
+$soft_orange: hsl(43, 84%, 65%); /* Self Care */
+
+/* Colors Neutral */
+$very_dark_blue: hsl(226, 43%, 10%); /* Background body */
+$dark_blue: hsl(235, 46%, 20%); /* Background card */
+$desaturated_blue: hsl(235, 45%, 61%); /* Background hover card */
+$pale_blue: hsl(236, 100%, 87%); /* Text */
+
+
+/* Footer */
+.attribution {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0;
+    border-top: 1px solid hsl(228, 45%, 44%);
+    font-size: 11px; text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+/* End Footer */
+
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: $very_dark_blue;
+    color: $pale_blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+}
+
+body,
+div,
+h1,
+h2,
+h3,
+p,
+ul,
+li{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3{
+    font-weight: 300;
+    color: white;
+}
+h2{
+    font-weight: 500;
+}
+p,
+li{
+    font-weight: 300;
+    font-size: 18px;
+}
+ul{
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+
+/* 
+    ----------------------------------------------------
+    ---------------------   MAIN   ---------------------
+    ----------------------------------------------------
+*/  
+
+.main{
+    height: 500px;
+    width: 80%;
+    margin: 5% 0;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-auto-rows: 100%;
+    gap: 1.8em;
+}
+
+.card{
+    background-color: $dark_blue;
+    border-radius: $border-radius-card;
+}
+
+.card-principal{
+    
+    > div{
+        border-radius: $border-radius-card;
+        padding: 1.5em;    
+    }
+
+    .content_profile{
+        background-color: $blue;
+        height: 70%;
+
+        .content-image{
+            width: 40%;
+            margin-bottom: 20%;
+            img{
+                width: 100%;
+                border-radius: 50%;
+                border: .15em solid #fff;
+                box-sizing: border-box;
+            }
+        }
+        h1{
+            font-weight: 300;
+            font-size: 3em;
+        }
+    }
+    
+    .content_nav{
+        background-color: $dark_blue;
+        height: 30%; 
+
+        ul {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            > li{
+                padding: 0;
+                margin: 0;
+                color: $desaturated_blue;
+                
+                &:hover{
+                    cursor: pointer;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.content-cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 1.8em;
+    
+    > div .content_image{
+        height: 20%;
+        position: relative;
+        img{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+    > div .content_text{
+        border-radius: $border-radius-card;
+        background-color: $dark_blue;
+        padding: 1.8em;
+        height: 80%;
+        position: relative;
+        
+        .content_text__jobs-title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            h2{
+                font-size: 1.2em;
+                font-weight: 500;
+            }
+        }
+        .content_text__job-time{
+
+            p{
+                font-size: 1em;
+            }
+            h3{
+                font-size: 3.5em;
+                margin: {
+                    top: 8%;
+                    bottom: 5%;
+                }
+            }
+        }
+
+
+        &:hover{
+            background-color: rgb(61, 55, 114);
+            cursor: pointer;
+        }
+    }
+
+    .card-work {
+        background-color: $light_red;
+    }
+    .card-play {
+        background-color: $soft_blue;
+    }
+    .card-study {
+        background-color: $light_red_2;
+    }
+    .card-exercise {
+        background-color: $lime_green;
+    }
+    .card-social {
+        background-color: $violet;
+    }
+    .card-self_care {
+        background-color: $soft_orange;
+    }
+}
+
+
+/* 
+    ///////////////////////////////////////////////
+    MOBILE DESIGN    //////////////////////////////
+    ///////////////////////////////////////////////
+*/
+
+@media screen and (max-width: 775px) {
+    
+    .main{
+        padding: 0;
+        margin: 10% 5%;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+        .card-principal{
+
+            .content_profile{
+                padding: 1.6em 1.5em;
+                height: auto;
+                display: flex;
+                
+                .content-image{
+                    width: 25%;
+                    margin: 0;
+                    margin-right: 5%;
+                    img{
+                        border: .2em solid #fff;
+                    }
+                }
+                
+                .content-text{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    p{
+                        font-size: .75em;
+                    }
+                    h1{
+                        font-size: 1.6em;
+                    }
+                }
+            }
+
+            .content_nav{
+                padding: 0;
+                ul{
+                    padding: 1.3em;
+                    flex-direction: row;
+                    justify-content: space-around;
+
+                    > li{
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+
+        .content-cards{
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6,1fr);
+            
+            > div {
+                height: 100px;
+            }
+
+            > div .content_text {
+                padding: 0 1em;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                h2{
+                    font-size: 1em;
+                }
+                .content_text__job-time{
+                    display: flex;
+                    align-items: baseline;
+                    justify-content: space-between;
+                    h3{
+                        font-size: 2em;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 575px) {
+    .main{
+        .content-cards > div{
+            height: 120px;
+        }
+    }
+}
+
+@media screen and (min-width: 776px) {
+    .main{
+        .content-cards > div{
+            height: auto;
+        }
+    }
+}
