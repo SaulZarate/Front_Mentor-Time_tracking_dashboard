@@ -1,5 +1,5 @@
 let data = []
-fetch('../data.json')
+fetch('https://saulzarate.github.io/Front_Mentor-Time_tracking_dashboard/data.json')
     .then(res => res.json())
     .then(info => {
         data = info
